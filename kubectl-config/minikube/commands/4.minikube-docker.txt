@@ -1,0 +1,7 @@
+minikube docker-env
+eval $(minikube docker-env)
+docker image ls
+docker image pull richardchesterwood/k8s-fleetman-webapp-angular:release0-5
+docker container run -p 8080:80 -d richardchesterwood/k8s-fleetman-webapp-angular:release0-5
+docker container stop #CONTAINER_ID#
+docker container -rm #CONTAINER_ID#

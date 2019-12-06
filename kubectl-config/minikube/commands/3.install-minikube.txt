@@ -1,0 +1,5 @@
+curl command from kubernetes site
+minikube start --vm-driver virtualbox
+minikube start --vm-driver hyperkit
+minikube status
+kubernetes version

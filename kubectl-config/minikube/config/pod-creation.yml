@@ -1,0 +1,29 @@
+# Pod of Old Release
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-old
+  labels:
+    myApp: webapp-label
+    myRelease: old
+spec:
+  containers:
+  - name: webapp
+    image: richardchesterwood/k8s-fleetman-webapp-angular:release0
+    ports:
+      - containerPort: 80
+---
+# Pod of New Release
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-new
+  labels:
+    myApp: webapp-label
+    myRelease: new
+spec:
+  containers:
+  - name: webapp
+    image: richardchesterwood/k8s-fleetman-webapp-angular:release0-5
+    ports:
+      - containerPort: 80

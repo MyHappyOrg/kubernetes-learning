@@ -1,0 +1,23 @@
+POD Creation
+------------
+kubectl apply -f pod-creation.yml
+kubectl descrive pod webapp
+Pods are not visible outside of cluster by default
+
+Accesing POD
+------------
+kubectl exec -it webapp sh
+wget http://locahost:80
+cat index.html
+
+Deployment
+----------
+kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
+kubectl get pod
+kubectl expose deployment hello-minikube --type=NodePort --port=8080
+kubectl get svc
+
+Delete
+------
+kubectl delete pod --all
+kubectl delete svc #SERVICE_NAME#

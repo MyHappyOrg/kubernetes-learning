@@ -1,0 +1,4 @@
+minikube status
+minikube dashboard
+minikube ip
+minikube service hello-minikube --url
