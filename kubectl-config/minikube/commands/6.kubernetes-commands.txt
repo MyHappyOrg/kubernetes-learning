@@ -24,3 +24,7 @@ Delete
 ------
 kubectl delete pod --all
 kubectl delete svc #SERVICE_NAME#
+
+Get Image Name in POD
+---------------------
+kubectl get pods <POD_NAME> -o=jsonpath='{$.spec.containers[:1].image}'
