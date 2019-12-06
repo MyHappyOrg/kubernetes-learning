@@ -9,6 +9,7 @@ Accesing POD
 kubectl exec -it webapp sh
 wget http://locahost:80
 cat index.html
+rm -f index.html    
 
 Deployment
 ----------
