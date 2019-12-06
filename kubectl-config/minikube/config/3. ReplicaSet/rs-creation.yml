@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: webapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      myApp: webapp
+  template:
+    metadata:
+      #name: webapp (Not required if we are using replicaset)
+      labels:
+        myApp: webapp
+    spec:
+      containers:
+      - name: webapp
+        image: richardchesterwood/k8s-fleetman-webapp-angular:release0
+        ports:
+          - containerPort: 80
