@@ -1,0 +1,8 @@
+1	Deploy Queue
+	http://192.168.99.103:30010/
+2	Deploy Position Simulator
+3	Deploy Position Tracker
+	http://192.168.99.103:30020/vehicles/City%20Truck
+4	Deploy API-Gateway
+5	Deploy webapp
+	http://192.168.99.103:30020
