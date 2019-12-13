@@ -18,6 +18,9 @@ spec :
       # volume stored outside of pod
       volumeMounts :
         - name : mongo-persistant-storage
-          # Pointer to the configuration of how we want to implement mount
-          persistantVolumeClaim : 
-            claimName : mongo-pvc
+          mountPath : /data/db # Data store path for mongodb
+    volumes :
+      - name : mongo-persistant-storage
+        # Pointer to the configuration of how we want to implement mount
+        persistentVolumeClaim : 
+          claimName : mongo-pvc
